@@ -1,0 +1,11 @@
+@use './vars.scss';
+
+*{
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+}
+
+body {
+  margin: 0;
+  background-color: vars.$background;
+}
