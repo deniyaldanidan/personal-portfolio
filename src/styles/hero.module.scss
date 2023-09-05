@@ -1,0 +1,296 @@
+@use './vars.module';
+
+@keyframes swipeAni {
+    0%{
+        transform: translateY(1px);
+        opacity: 0;
+    }
+    1%{
+        transform: translateY(1px);
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(25px);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(31px);
+        opacity: 0;
+    }
+}
+
+.section{
+    position: relative;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 130px 50px 115px;
+    background: none;
+    z-index: 1;
+
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        content: " ";
+        z-index: -1;
+        background-image: url('../assets/low-poly-desktop.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        opacity: 0.3;
+
+        @media (orientation: portrait){
+            background-image: url('../assets/low-poly-tablet.svg');
+        }
+    }
+
+    .job_title{
+        font-size: 1.15rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        background-color: vars.$accent;
+        padding: 7.5px 25px;
+        border-radius: 5px;
+        display: flex;
+    }
+    
+    .title{
+        font-size: 2.75rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 7.5px;
+    }
+
+    .sub_text{
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        font-weight: 500;
+        max-width: 750px;
+        text-align: center;
+        margin-top: 12.5px;
+    }
+
+    .btn_grps{
+        margin-top: 30px;
+        display: flex;
+        column-gap: 40px;
+        justify-content: center;
+        align-content: center;
+
+        a{
+            padding: 10px 40px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            background-color: vars.$primary;
+            border-radius: 10px;
+            color: vars.$background;
+            transition: 100ms ease-in-out;
+
+            &:nth-of-type(2){
+                background-color: vars.$secondary;
+                color: vars.$text;
+            }
+
+            &:hover{
+                background-color: vars.$text;
+                color: vars.$background;
+            }
+        }
+    }
+
+    @media (max-width: 1250px){
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @media (max-width: 1125px){
+        .job_title{
+            font-size: 1.125rem;
+        }
+
+        .title{
+            font-size: 2.5rem;
+        }
+
+        .sub_text{
+            font-size: 1.25rem;
+        }
+
+        .btn_grps{
+            a{
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    @media (max-width: 980px){
+        padding-left: 35px;
+        padding-right: 35px;
+
+        .job_title{
+            font-size: 1.1rem;
+        }
+
+        .title{
+            font-size: 2.25rem;
+        }
+
+        .sub_text{
+            font-size: 1.225rem;
+        }
+
+        .btn_grps{
+            a{
+                font-size: 1.225rem;
+                padding: 8px 35px;
+            }
+        }
+    }
+
+    @media (max-width: 830px){
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .job_title{
+            font-size: 1.075rem;
+            padding: 5px 22.5px;
+        }
+
+        .title{
+            font-size: 2rem;
+        }
+
+        .sub_text, .btn_grps>a{
+            font-size: 1.175rem;
+        }
+
+        .sub_text{
+            max-width: 710px;
+        }
+    }
+
+    @media (max-width: 720px){
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    @media (max-width: 580px){
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .job_title{
+            font-size: 1rem;
+            padding: 5px 15px;
+            border-radius: 3px;
+        }
+
+        .title{
+            font-size: 1.75rem;
+            text-align: left;
+        }
+
+        .sub_text{
+            font-size: 1.125rem;
+            max-width: 475px;
+        }
+
+        .btn_grps{
+            flex-wrap: wrap;
+            gap: 25px;
+            a{
+                font-size: 1.125rem;
+                padding: 7.5px 30px;
+            }
+        }
+    }
+
+    @media (max-width: 420px){
+        padding-left: 17.5px;
+        padding-right: 17.5px;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .sub_text{
+            font-size: 1.1rem;
+            text-align: left;
+            max-width: none;
+        }
+
+        .btn_grps{
+            a{
+                font-size: 1rem;
+                padding: 7.5px 25px;
+            }
+        }
+    }
+
+    @media (max-width: 310px){
+        padding-left: 12.5px;
+        padding-right: 12.5px;
+
+        .job_title{
+            font-size: 0.95rem;
+        }
+
+        .title{
+            font-size: 1.5rem;
+        }
+
+        .sub_text{
+            font-size: 1.05rem;
+        }
+
+        .btn_grps{
+            flex-direction: column;
+            align-items: initial;
+            justify-content: left;
+            width: 100%;
+
+            a{
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+        }
+    }
+
+    .swipe_text{
+        position: absolute;
+        left: 50%;
+        bottom: 87.5px;
+        transform: translateX(-50%) translateY(50%);
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: vars.$text;
+    }
+
+    .swipe_btn{
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%) translateY(50%);
+        width: 18px;
+        height: 42.5px;
+        border: 2px vars.$text solid;
+        border-radius: 30px;
+        box-sizing: content-box;
+
+        span{
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: vars.$text;
+            margin: auto;
+            animation: swipeAni 2s linear infinite both;
+        }
+    }
+}

@@ -1,11 +1,33 @@
-@use './vars.scss';
+@use './vars.module';
 
 *{
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
   font-family: 'Lora', serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  letter-spacing: 0.7px;
 }
 
 body {
   margin: 0;
   background-color: vars.$background;
+  color: vars.$text;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+#root{
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
