@@ -8,7 +8,7 @@ export default function Hero() {
             <div className={styles.title}>Hi, I'm Deniyal Dani</div>
             <div className={styles.sub_text}> A web developer passionate about crafting stunning online experiences. Check out my work and let's craft something extraordinary together.</div>
             <div className={styles.btn_grps}>
-                <a href="https://on.contra.com/NRp6HR" rel='noreferrer' target='_blank'>Contact</a>
+                <a href='https://www.linkedin.com/in/deniyaldani' rel='noreferrer' target='_blank'>Contact</a>
                 <a href="#projects">Projects</a>
             </div>
             <div className={styles.swipe_text}>Swipe</div>
