@@ -13,7 +13,7 @@ export default function TechStack() {
                     </div>
                 </div>
                 <div className={styles.sec_2}>
-                    <div className={styles.sub_title}>Some of the tools i use</div>
+                    <div className={styles.sub_title}>Some of the tools i use:</div>
                     <div className={styles.sec_list}>
                         <div>
                             <strong>Languages:</strong>
@@ -25,11 +25,11 @@ export default function TechStack() {
                         </div>
                         <div>
                             <strong>Backend:</strong>
-                            <span>NodeJS, ExpressJS, postgresql, mysql, MongoDB.</span>
+                            <span>NodeJS, ExpressJS, socket.io, postgresql, mysql, MongoDB.</span>
                         </div>
                         <div>
                             <strong>Others:</strong>
-                            <span>Git, Github, Figma.</span>
+                            <span>Git, Github, Figma, Inkscape.</span>
                         </div>
                     </div>
                 </div>
