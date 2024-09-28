@@ -30,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px 50px 150px;
+    padding: 125px 50px 100px;
     background: none;
     z-index: 1;
 
@@ -44,9 +44,9 @@
         z-index: -1;
         background-image: url('../assets/low-poly-desktop.svg');
         background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
+        background-repeat: repeat;
+        // background-attachment: fixed;
+        // background-size: cover;
         opacity: 0.3;
 
         @media (orientation: portrait) {
@@ -111,9 +111,9 @@
     .swipe_text {
         position: absolute;
         left: 50%;
-        bottom: 87.5px;
+        bottom: 75px;
         transform: translateX(-50%) translateY(50%);
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         font-weight: 600;
         color: vars.$text;
     }
@@ -121,7 +121,7 @@
     .swipe_btn {
         position: absolute;
         left: 50%;
-        bottom: 50px;
+        bottom: 35px;
         transform: translateX(-50%) translateY(50%);
         width: 18px;
         height: 42.5px;
